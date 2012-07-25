@@ -1,0 +1,158 @@
+
+Panopticon remote control menus
+================================================================================
+
+  The default menus are based on the layout of a small generic remote with the
+following layout, but you're free to use any remote and modify anything as you
+see fit.
+
+  __________o_________
+ /                    \    When in quick and
+|                      |   manual modes, the
+| [pwr ] [vol+] [stop] |   numbers 1-9 are
+|                      |   used as a
+| [rew ] [play] [ ff ] |   directional pad:
+|                      |   
+| [down] [vol-] [ up ] |   
+|                      |   
+| [ 0  ] [ eq ] [rept] |   
+|                      |      _   /\   _
+| [ 1  ] [ 2  ] [ 3  ] |     |\   ||   /|
+|                      |  
+| [ 4  ] [ 5  ] [ 6  ] |    <=   enter  =>
+|                      |
+| [ 7  ] [ 8  ] [ 9  ] |     |/   ||   \|
+|                      |      -   \/   -
+ \____________________/
+
+
+
+Commands and examples
+================================================================================
+
+
+A. QUICK angles and directions, using numbers like a dpad
+   (no function selection needed, always ready for instant action)
+	1. Press start angle 1 through 9
+	2. Press stop angle 1 through 9
+        3. program begins with no further entry
+
+	ex. 4 6 = pan left to right from 180 to 0deg, 1 row
+	ex  9 1 = pan right to left and bottom to top from 0x0 to 180x180
+	ex  6 8 = pan right to left and top to bottom from 90x0 to 0x90
+	ex  5 5 = take a single pic at 90x90 dead center
+
+
+B. CENTER Based pan angles.
+	1. Press eq  (Think: equal around center)
+	2. enter 3 digit x axis width
+	3. enter 3 digit y axis width
+	4. Program begins
+
+	ex. 180 x 090 = pan Xaxis 0 to 180 and Yaxis 45 to 135(90deg wide)
+        ex. 090 x 000 = pan X 45 to 135, pan Y to 90 only (1 row of images)
+
+
+C. SPECIFIC angle entry.
+	1. Press UP arrow  (Think: up for brains)
+	2. enter 3 digit x axis start point
+	3. enter 3 digit y axis start point
+	4. enter 3 digit x axis end point
+	5. enter 3 digit y axis end point
+	6. Program begins
+
+	ex. 066 120 033 060 = pan Xaxis 66 to 33 while paning y from 120 to 60.
+
+
+D. MANUAL agnle selection.
+	1.  Press Down arrow  (Think: lower for hands)
+	2.  Use numbers as a dpad 2=up 8=dow 4=left 6=right to move servos
+             to desired position.
+	3.  Press 5 to select current position as start angles
+	4.  Use numbers as dpad to move to desired position
+	5.  Press 5 to select position as destination angle.
+	6. Program begins.
+
+	ex.  move to start position, 5, move to stop posit, 5.  Camera takes
+              necassary images to photograph entire range.
+	ex.  move to position, 5, 5.  Camera takes 1 images at current angle.
+
+
+E. REPEATing x times
+	1. Press rept.  (Think: repetition)
+        2. enter 3 digit number of times to repeat next action
+        3. program next action
+        4. next action repeats. after the next action finishes all repeating
+            actions, it goes to zero.
+
+	ex. 003 = repeat 3 times
+
+
+F. DELAYed startup
+	1. Press pause (Think: pause before beginning)
+	2. Enter 3 digit number, in seconds.
+	3. Waits n seconds before begining routing, AND between repeating
+            actions.  Resets to zero when done.
+
+	ex. 060 = wait 1 minute before taking photos.  If repeats enabled, also
+             wait 1min between sets of photos.
+
+
+J. PROGRAMMING your camera characteristics.
+	1.  Press FF (>>) , 3, 9, 7 , 1.  This combo enters camera prog mode
+	2.  Enter 2 digit number of seconds your camera takes to store images,
+             EX. 06 for six seconds.
+	3.  Enter 3 digit camera sleep timer (should be around half of your
+             camera's timer, calculated as a mulplier of 8)
+             EX. 7 = 56 seconds, 8=64 seconds 
+	4.  Enter 3 digit hfov
+	5.  Enter 3 digit vfov
+	6.  Enter 3 digit horizontal overlap
+	7.  Enter 3 digit vertical overlap
+
+
+K. PROGRAMMING your servo characteristics.
+	1.  Press FF  (>>) , 3, 9, 7 , 2.  This combo enters servo prog mode
+	2.  Enter 3 digit vertical servo maximum degrees (ex. 172)
+	3.  Enter 3 digit horizontal servo maximum degrees
+	4.  Enter 3 digit shutter servo rest position
+	5.  Enter 3 digit shutter servo half-tap position
+	6.  Enter 3 digit shutter servo full tap position
+	7.  Enter 2 digit servo speed.
+
+
+L. SERVO TUNING
+(WARNING!!! you WILL destroy your servos if you repeatedly hit or strain against
+ the endpoints.  Make sure to back off several stops from an endpont to allow
+ for the inevitable power and temperature changes)
+
+	1.  Press FF  (>>) , 3, 9, 7 , 3.  This combo enters servo tuning mode
+	2.  Press press 2(up) to increase MINimum timing, 8(down) to decrease.
+             You should target just shy of the end stop.  Make sure your servo is
+             not twitching or straining, and back off 10 steps before continuing
+	3.  Press press 2(up) to increase MAXimum timing, 8(down) to decrease.
+             You should target just shy of the end stop.  Make sure your servo is
+             not twitching or straining, and back off 10 steps before continuing
+	4.  Press 5 to save and move on to next servo.
+	5.  Repeat steps 4-6 for each servo
+
+
+M. WORKAROUNDS for slow FOCUS camera problems.
+	Some cameras are quicker to respond if the shutter is half-depressed for
+         a moment before taking an image.  If some images have been blurry,
+	 or some images were not captured(and you've already tried increasing the
+         timing between images), your camera may benefit from this.
+	1.  Press FF  (>>) , 3, 9, 7 , 6.
+
+	result.  Beep.  halftap before picture for cams that dont focus quickly
+         or at all before full snap
+
+N. RESET TO FACTORY DEFAULTS (clear ALL configuration info)
+	1.  Press FF (>>) , 3, 9, 0 , 9
+
+	result.  system reboots, reseting all servo setings, servo tuning, camera
+                 characteristics, and sound settings, to defaults.
+
+
+
+

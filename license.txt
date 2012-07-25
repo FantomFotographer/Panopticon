@@ -1,0 +1,26 @@
+I haven't chosen a proper license yet.  In the meantime, the following should make due.
+
+
+Makeshift License 1.0
+---------------------
+
+No commercial use.
+
+  This project is provided for non-commercial  use only.  You may not sell anything that uses any part of this project.  You may not generate revenue from the use of any part of this project.  This is for liability reasons, due to a lack of better license at this time, and may change in the future.  Only official future releases of this project may alter the terms of this license, or replace it altogether. 
+
+
+Redistribution.
+
+  You may use this project, in whole or in part, in anything you want, as long as it does not violate the above, and you credit the original project.  This license, and the complete unaltered source, must accompany any redistribution of any part of this project.
+
+
+Share.
+
+  Any inclusion of any part of this project, in a project separate from the original project, is allowed, but requires notification of the maintainers of the original project.  Any alterations, fixes, or improvements to this project must be submitted to the maintainers of the original project for possible inclusion in future versions of this project, and will become property of this project.
+
+
+Liability
+
+  This project should not be used in any critical application.  The authors are not responsible for any casualties or damages that result from its use.  The authors are not responsible for any anything you do with this project.  Anything.  The user assumes all risk.
+
+Use of any part of this project constitutes acceptance of these terms.
